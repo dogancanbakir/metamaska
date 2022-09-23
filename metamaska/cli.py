@@ -3,9 +3,9 @@ import click
 from metamaska.metamaska import Metamaska
 
 
-@click.command()
-@click.option('--meta')
-def main(meta, help="malevolent payload"):
+@click.command(no_args_is_help=True)
+@click.option('-m', '--meta', help = "meta to find form for")
+def main(meta):
     if not meta:
         raise ValueError("meta is required.")
 
