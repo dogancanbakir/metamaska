@@ -12,8 +12,9 @@ class PayloadClassifier:
             raise ValueError("payload clf model file doesn't exist")
 
         self.payload_clf = joblib.load(payload_clf_filename)
+        self.classes_ = self.payload_clf.classes_
 
-    def predict(self, payload):
+    def _transform(self, payload):
         if not payload:
             raise ValueError("payload is required.")
 
@@ -22,4 +23,12 @@ class PayloadClassifier:
         payload = payload.lower()
         payload = remove_whitespace(payload)
 
+        return payload
+
+    def predict(self, payload):
+        payload = self._transform(payload)
         return self.payload_clf.predict([payload])
+
+    def predict_proba(self, payload):
+        payload = self._transform(payload)
+        return self.payload_clf.predict_proba([payload])
