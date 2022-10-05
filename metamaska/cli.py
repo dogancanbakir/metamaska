@@ -4,13 +4,12 @@ from metamaska.metamaska import Metamaska
 
 
 @click.command()
-@click.option('--meta')
-def main(meta, help="malevolent payload"):
+@click.option('-m', '--meta', required=True, help="malevolent payload")
+def main(meta):
     if not meta:
         raise ValueError("meta is required.")
 
-    mm = Metamaska()
-    click.echo(mm.form(meta))
+    print(Metamaska().form(meta))
 
 
 if __name__ == "__main__":
