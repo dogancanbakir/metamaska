@@ -1,0 +1,4 @@
+Flask==2.0.1
+joblib==1.0.1
+click==8.0.1
+scikit-learn==1.1.2

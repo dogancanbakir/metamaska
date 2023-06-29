@@ -1,0 +1,10 @@
+[
+    {
+        "pattern": "<li><a href=\"/wiki/file:socrates.png\" class=\"image\"><img alt=\"socrates.png\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/socrates.png/18px-socrates.png\" decoding=\"async\" width=\"18\" height=\"28\" class=\"noviewer\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/socrates.png/27px-socrates.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cd/socrates.png/36px-socrates.png 2x\" data-file-width=\"326\" data-file-height=\"500\" /> </a> <a href=\"/wiki/portal:philosophy\" title=\"portal:philosophy\">philosophy&#32;portal </a> </li> </ul>",
+        "type": "valid"
+    },
+    {
+        "pattern": "<tt onmouseover=\"alert(1)\">test</tt>",
+        "type": "xss"
+    }
+]
